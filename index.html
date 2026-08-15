@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahd Qureshi — Engineer</title>
+<meta name="description" content="Engineer in Toronto. I build deterministic, inspectable systems — and ship them with tests, docs, and a live demo.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mahd Qureshi — Engineer">
+<meta property="og:description" content="Engineer in Toronto. I build deterministic, inspectable systems — and ship them with tests, docs, and a live demo.">
+<meta property="og:url" content="https://mahd-qureshi.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#work">Skip to work</a>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Mahd Qureshi</h1>
+    <p class="tagline">Engineer. Toronto.</p>
+    <p class="lede">
+      I'm 21 and usually somewhere between a neural network, a game mechanic,
+      a film idea, and a math rabbit hole. I like hard problems, small teams,
+      and fast feedback.
+    </p>
+  </header>
+
+  <main>
+
+    <section id="work" aria-labelledby="work-h">
+      <p class="marker">01 / Selected work</p>
+      <h2 id="work-h" class="sr-only">Selected work</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Continuity Engine</h3>
+          <p class="meta">v0.1 · JavaScript · zero dependencies · zero API calls</p>
+        </div>
+
+        <p class="summary">
+          A deterministic character-continuity engine for interactive stories
+          that remembers choices, updates emotional state, and explains what
+          should happen next.
+        </p>
+
+        <p>
+          Most AI character prototypes hand memory and narrative decisions to a
+          model, which makes the resulting path hard to replay or inspect. I
+          wanted to test a narrower question: can character continuity be
+          small, deterministic, and inspectable instead?
+        </p>
+
+        <p>
+          Every choice becomes an immutable event, and current state is rebuilt
+          by replaying them — reproducible rather than quietly mutable.
+          Emotional state decays toward a per-character baseline over simulated
+          time:
+        </p>
+
+        <p class="formula" role="img" aria-label="state at time t equals baseline plus previous minus baseline, times e to the power of negative decay times elapsed time">
+          state(t) = baseline + (previous − baseline) × e<sup>−decay × elapsed</sup>
+        </p>
+
+        <p>
+          A constrained beam search then proposes a three-beat narrative path.
+          The same events always produce the same result, and you can expand
+          the decision trace to see why.
+        </p>
+
+        <ul class="tags">
+          <li>event sourcing</li>
+          <li>beam search</li>
+          <li>architecture decision records</li>
+          <li>test suite</li>
+          <li>CI</li>
+        </ul>
+
+        <p class="links">
+          <a href="https://mahd-qureshi.github.io/continuity-engine/">Live demo</a>
+          <a href="https://github.com/mahd-qureshi/continuity-engine">Source</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>iOS product <span class="badge">unreleased</span></h3>
+          <p class="meta">In progress · Swift · TypeScript · Postgres</p>
+        </div>
+
+        <p class="summary">
+          A native iOS app with a voice interface, backed by a TypeScript API.
+          Private while it's still being built.
+        </p>
+
+        <p>
+          The hard parts have been on the input side. Hearing a whole sentence
+          including its pauses, instead of cutting someone off at the first
+          silence. Dropping the wake-word dependency so the thing can actually
+          run on a phone. Keeping a demo environment alive long enough to be
+          useful, and reporting clearly when it breaks.
+        </p>
+
+        <p class="muted-note">Happy to talk through the architecture directly.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="how-h">
+      <p class="marker">02 / How I work</p>
+      <h2 id="how-h" class="sr-only">How I work</h2>
+      <ul class="principles">
+        <li>No filler repos. One project at a time. It goes public when it's actually good.</li>
+        <li>If it isn't reproducible, I don't trust it yet.</li>
+        <li>Write the docs and the tests as part of shipping, not after.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="bg-h">
+      <p class="marker">03 / Background</p>
+      <h2 id="bg-h" class="sr-only">Background</h2>
+      <p>
+        I grew up across countries and moved on my own to boarding school in
+        Canada as a teenager. I'm learning my fifth language. Outside code:
+        basketball, volleyball, track, and skateboarding.
+      </p>
+    </section>
+
+    <section aria-labelledby="contact-h">
+      <p class="marker">04 / Contact</p>
+      <h2 id="contact-h" class="sr-only">Contact</h2>
+      <p>
+        If you're building something hard and small, I'd like to hear about it.
+      </p>
+      <ul class="contact">
+        <li><a href="mailto:qureshi.mahd@gmail.com">qureshi.mahd@gmail.com</a></li>
+        <li><a href="https://github.com/mahd-qureshi">github.com/mahd-qureshi</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built by hand. No frameworks, no trackers, no dependencies.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
