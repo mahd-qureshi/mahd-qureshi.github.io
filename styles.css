@@ -318,3 +318,43 @@ footer p {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* --- now --------------------------------------------------------
+   A dated list of what is actually happening. Its whole job is to
+   prove the page is maintained, so the date is part of the design
+   rather than a footnote.
+   --------------------------------------------------------------- */
+
+.dateline {
+  float: right;
+  color: var(--faint);
+  letter-spacing: 0.1em;
+}
+
+.now {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: var(--measure);
+}
+
+.now li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.now li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0.08em;
+  color: var(--accent);
+  font-size: 0.8em;
+}
+
+.now strong {
+  color: var(--text);
+  font-weight: 600;
+}
