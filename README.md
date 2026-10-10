@@ -1,30 +1,37 @@
-# mahd-qureshi.github.io
+# Mahd Qureshi — founder & creator
 
-My personal site. Static HTML and CSS — no framework, no build step, no
-dependencies, no trackers.
+Personal site at https://www.mahdqureshi.com/.
+Static HTML, CSS, and a small progressive-enhancement script. No framework,
+external fonts, trackers, dependencies, or build step.
 
-**Live:** https://mahd-qureshi.github.io/
+## Local preview
 
-## Run it locally
-
-```bash
-python3 -m http.server 4173
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Then open http://localhost:4173.
+Open http://127.0.0.1:4173/.
 
-## Files
+## Main files
 
-| File | Purpose |
-|---|---|
-| `index.html` | The whole site |
-| `styles.css` | All styling, light and dark |
-| `404.html` | Not-found page for GitHub Pages |
-| `favicon.svg` | Monogram |
+- `index.html`: founder positioning, LifeHub, personal background, film credit,
+  Continuity Engine, long-term ambition, and contact.
+- `styles.css`: responsive editorial layout and reduced-motion support.
+- `site.js`: accessible two-view LifeHub screenshot switcher; the first view
+  remains usable without JavaScript.
+- `404.html`: custom not-found page.
+- `assets/`: authentic LifeHub screenshots and the social preview card.
 
-## Notes
+## Content provenance
 
-Dark mode follows the operating system via `prefers-color-scheme`; every colour
-is a custom property declared once in `:root` and overridden in the dark block.
+The founder supplied the LifeHub status, 20 TestFlight users, 300+ people
+approached in person, end-to-end ownership, personal background, and ambitions
+on October 10, 2026. Outreach is not presented as retention or waitlist signups.
+App Store submission is in progress; the future semester recap is not advertised
+as a released feature. Private model/infrastructure information is omitted.
 
-Deployed by GitHub Pages from `main`.
+The film credit is linked to https://filmfreeway.com/hopedotexe. LifeHub images
+come from the founder's public product site at https://thelifehub.site/.
+Continuity Engine descriptions and links are retained from the previous site.
+
+`CNAME` retains the existing custom domain. GitHub Pages deploys from `main`.
