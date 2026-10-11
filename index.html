@@ -1,206 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mahd Qureshi — Engineer</title>
-<meta name="description" content="21, Toronto. I build deterministic, inspectable systems and ship them with tests, docs, and a live demo. Looking for people to build with.">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
-
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Mahd Qureshi — Engineer">
-<meta property="og:description" content="21, Toronto. I build deterministic, inspectable systems and ship them with tests, docs, and a live demo. Looking for people to build with.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahd Qureshi — Founder & Creator</title>
+<meta name="description" content="Building for my generation. Thinking in decades. Mahd Qureshi, founder of LifeHub and actor in [hope.exe].">
+<meta name="theme-color" content="#f6f5fa">
+<meta property="og:type" content="profile"><meta property="og:title" content="Mahd Qureshi — Founder & Creator">
+<meta property="og:description" content="Building for my generation. Thinking in decades. LifeHub, film, and everything ahead.">
 <meta property="og:url" content="https://www.mahdqureshi.com/">
-<meta property="og:image" content="https://www.mahdqureshi.com/card.png">
+<meta property="og:image" content="https://www.mahdqureshi.com/assets/social-card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.mahdqureshi.com/card.png">
-
 <link rel="canonical" href="https://www.mahdqureshi.com/">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="themes.css">
-<script>
-  // Applied before first paint so a saved design does not flash the default.
-  try {
-    var saved = localStorage.getItem("mq-theme");
-    if (saved) document.documentElement.dataset.theme = saved;
-  } catch (e) {}
-</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css"><script src="site.js" defer></script>
 </head>
 <body>
-
-<a class="skip" href="#now">Skip to content</a>
-
-<div class="page">
-
-  <header class="masthead">
-    <h1>Mahd Qureshi</h1>
-    <p class="tagline">Engineer. Toronto.</p>
-    <p class="lede">
-      I'm 21 and usually somewhere between a neural network, a game mechanic,
-      a film idea, and a math rabbit hole. I like hard problems, small teams,
-      and fast feedback.
-    </p>
-    <p class="lede">
-      I grew up across several countries and moved on my own to boarding school
-      in Canada as a teenager, which mostly means I've had a lot of practice at
-      being the new person in the room. I'm on my fifth language. Progress is
-      steady in the way glaciers are steady.
-    </p>
-  </header>
-
-  <main>
-
-    <section id="now" aria-labelledby="now-h">
-      <p class="marker">01 / Now <span class="dateline">August 2026</span></p>
-      <h2 id="now-h" class="sr-only">What I'm working on now</h2>
-
-      <ul class="now">
-        <li>
-          Shipped <strong>v0.2 of Continuity Engine</strong>. The v0.1 README
-          listed four things as next; all four are in. Turns out publishing a
-          roadmap is an effective way to make yourself finish it.
-        </li>
-        <li>
-          Building an iOS product I'm not naming yet. Voice interface. Most of
-          the work so far has gone into teaching it to wait for the end of a
-          sentence, which humans manage without being told.
-        </li>
-        <li>
-          Reading more mathematics than I have any professional excuse for.
-        </li>
-      </ul>
-    </section>
-
-    <section id="work" aria-labelledby="work-h">
-      <p class="marker">02 / Selected work</p>
-      <h2 id="work-h" class="sr-only">Selected work</h2>
-
-      <article class="project">
-        <div class="project-head">
-          <h3>Continuity Engine</h3>
-          <p class="meta">v0.2 · JavaScript · zero dependencies · zero API calls</p>
-        </div>
-
-        <p class="summary">
-          A deterministic character-continuity engine for interactive stories
-          that remembers choices, updates emotional state, and explains what
-          should happen next.
-        </p>
-
-        <p>
-          Most AI character prototypes hand memory and narrative decisions to a
-          model, which makes the resulting path hard to replay or inspect. I
-          wanted to test a narrower question: can character continuity be
-          small, deterministic, and inspectable instead?
-        </p>
-
-        <p>
-          Every choice becomes an immutable event, and current state is rebuilt
-          by replaying them — reproducible rather than quietly mutable.
-          Emotional state decays toward a per-character baseline over simulated
-          time:
-        </p>
-
-        <p class="formula" role="img" aria-label="state at time t equals baseline plus previous minus baseline, times e to the power of negative decay times elapsed time">
-          state(t) = baseline + (previous − baseline) × e<sup>−decay × elapsed</sup>
-        </p>
-
-        <p>
-          A constrained beam search then proposes a three-beat narrative path.
-          The same events always produce the same result, and you can expand
-          the decision trace to see why.
-        </p>
-
-        <ul class="tags">
-          <li>event sourcing</li>
-          <li>beam search</li>
-          <li>property-based tests</li>
-          <li>architecture decision records</li>
-          <li>CI</li>
-        </ul>
-
-        <p class="links">
-          <a href="https://mahd-qureshi.github.io/continuity-engine/">Live demo</a>
-          <a href="https://github.com/mahd-qureshi/continuity-engine">Source</a>
-        </p>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <h3>iOS product <span class="badge">unreleased</span></h3>
-          <p class="meta">In progress · Swift · TypeScript · Postgres</p>
-        </div>
-
-        <p class="summary">
-          A native iOS app with a voice interface, backed by a TypeScript API.
-          Private while it's still being built.
-        </p>
-
-        <p>
-          The hard parts have been on the input side. Hearing a whole sentence
-          including its pauses, instead of cutting someone off at the first
-          silence. Dropping the wake-word dependency so the thing can actually
-          run on a phone. Keeping a demo environment alive long enough to be
-          useful, and reporting clearly when it breaks.
-        </p>
-
-        <p class="muted-note">Happy to talk through the architecture directly.</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="how-h">
-      <p class="marker">03 / How I work</p>
-      <h2 id="how-h" class="sr-only">How I work</h2>
-      <ul class="principles">
-        <li>No filler repos. One project at a time. It goes public when it's actually good.</li>
-        <li>If it isn't reproducible, I don't trust it yet.</li>
-        <li>Write the docs and the tests as part of shipping, not after.</li>
-        <li>Say the honest version of what a thing does, including what it doesn't.</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="off-h">
-      <p class="marker">04 / Off the clock</p>
-      <h2 id="off-h" class="sr-only">Off the clock</h2>
-      <p>
-        Basketball, volleyball, track, and skateboarding — roughly in order of
-        how often each one has injured me.
-      </p>
-      <p>
-        Otherwise: film, games, and mathematics. Ask me about any of the three
-        and you should expect to lose an hour.
-      </p>
-    </section>
-
-    <section aria-labelledby="contact-h">
-      <p class="marker">05 / Build with me</p>
-      <h2 id="contact-h" class="sr-only">Build with me</h2>
-      <p>
-        I'm building my own things and I'm looking for people to build them
-        with. If you're working on something hard and small — or you want to be,
-        and you're looking for someone who'll actually ship it — tell me about
-        it.
-      </p>
-      <p class="muted-note">
-        I read everything. I reply to anything specific.
-      </p>
-      <ul class="contact">
-        <li><a href="mailto:qureshi.mahd@gmail.com">qureshi.mahd@gmail.com</a></li>
-        <li><a href="https://github.com/mahd-qureshi">github.com/mahd-qureshi</a></li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>Built by hand. No frameworks, no trackers, no dependencies.</p>
-  </footer>
-
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="#top" aria-label="Mahd Qureshi, back to top"><img src="favicon.svg" width="42" height="42" alt=""><span>MAHD<br> QURESHI</span></a><nav aria-label="Main navigation"><a href="#lifehub">WORK</a><a href="#about">ABOUT</a><a href="#contact">SAY HELLO <span aria-hidden="true">↗</span></a></nav></header>
+<main id="main">
+<section class="hero wrap" id="top" aria-labelledby="hero-title">
+<div class="hero-kicker"><span>Founder. Builder. Actor.</span><span>Toronto, Canada <span aria-hidden="true">↗</span></span></div>
+<div class="hero-layout">
+<div class="identity"><h1 id="hero-title"><span>MAHD</span><span>QURESHI<span class="period">.</span></span></h1><p class="hero-manifesto">Building for my generation.<br> <span>Thinking in decades.</span></p><div class="hero-intro"><img class="founder-portrait" src="assets/mahd-portrait.webp" width="416" height="555" alt="Mahd Qureshi" decoding="async"><p class="hero-bio">Founder, engineer, and actor. I care about how things work—and how they make people feel.</p></div><a class="button button-black" href="#lifehub">Get into the work <span aria-hidden="true">↓</span></a></div>
+<div class="hero-object"><a class="product-poster" href="#lifehub" aria-label="Explore LifeHub, my current focus"><div class="poster-top"><span>Current focus</span><span>001</span></div><div class="poster-type" aria-hidden="true">LIFE<br> HUB.</div><div class="poster-orbit" aria-hidden="true"></div><img class="poster-phone" src="assets/lifehub-home.webp" width="780" height="1691" alt="LifeHub’s iPhone home view with a personal Moji companion" fetchpriority="high"><span class="poster-stamp">One builder.<br> Every detail.</span><div class="poster-bottom"><span>One screen. One character.</span><span aria-hidden="true">↗</span></div></a><p class="margin-note"><span aria-hidden="true">↳</span> Designed and built by me.</p></div>
 </div>
-
-<script src="theme.js"></script>
-</body>
-</html>
+<div class="hero-bottom"><span>Code × film × human connection</span><a href="#lifehub">Keep scrolling <span aria-hidden="true">↓</span></a></div>
+</section>
+<div class="ticker" aria-hidden="true"><div>BUILD SOMETHING THAT MATTERS. <span>↗</span> BUILD SOMETHING THAT MATTERS. <span>↗</span> BUILD SOMETHING THAT MATTERS. <span>↗</span></div></div>
+<section class="work-section" id="lifehub" aria-labelledby="lifehub-title"><div class="wrap">
+<div class="section-label"><span><b>01</b> / The work</span><span>My focus today</span></div>
+<div class="work-title"><h2 id="lifehub-title">LifeHub<span>.</span></h2><p>One screen. One character.<br> Built by one Gen Z founder.</p></div>
+<div class="work-grid">
+<div class="product-gallery"><div class="gallery-topline"><span>Inside LifeHub</span><span class="gallery-count" aria-hidden="true">01 / 02</span></div><div class="product-screen"><img id="product-home" src="assets/lifehub-home.webp" width="780" height="1691" alt="LifeHub home view with a Moji companion, local weather, and a conversational greeting" loading="lazy"><img id="product-today" src="assets/lifehub-today.webp" width="780" height="1691" alt="LifeHub’s daily view with a Moji companion, calendar, and to-do drawer" loading="lazy" hidden></div><div class="gallery-controls" aria-label="Choose an app view" hidden><button type="button" data-screen="home" aria-pressed="true" aria-controls="product-home">The companion</button><button type="button" data-screen="today" aria-pressed="false" aria-controls="product-today">The day ahead</button></div><p class="gallery-caption" aria-live="polite">LifeHub · Home view</p></div>
+<div class="work-copy"><p class="eyebrow">Founder / product / engineering / design</p><h3>For the student<br> who needs to hear:<br> <span>we can work<br> through this.</span></h3><p>When a whole semester feels like too much, the next step can feel impossible. LifeHub is my response: a digital companion designed to help students break things down and work through what comes next.</p><p>At its center is Moji: one character, in a single-screen experience. A companion for your questions, your ideas, and the day in front of you. I built every part of LifeHub, from engineering to design.</p><dl class="proof-grid"><div><dt>20</dt><dd>TestFlight users</dd></div><div><dt>300<span>+</span></dt><dd>People approached in person</dd></div></dl><a class="button button-violet" href="https://thelifehub.site/#waitlist">Join the waitlist <span aria-hidden="true">↗</span></a><p class="work-note">Currently in TestFlight.<br> Preparing for App Store submission.</p></div>
+</div></div></section>
+<section class="about-section wrap" id="about" aria-labelledby="about-title"><div class="section-label"><span><b>02</b> / The person</span><span>More than one medium</span></div><div class="about-heading"><h2 id="about-title">An engineer’s mind.<br> <span>A creator’s instinct.</span></h2><p>Products, people, and performance.<br> All part of the same life.</p></div>
+<div class="project-list">
+<article class="project-row" aria-labelledby="continuity-title">
+<div class="project-index"><span>01</span><p class="eyebrow">Projects / Open source</p></div>
+<div class="project-content"><div class="project-heading"><h3 id="continuity-title">Continuity Engine<span>.</span></h3><span class="project-tag">Interactive storytelling</span></div>
+<div class="project-body"><p class="project-lede">Make a decision.<br> Change how the story unfolds.</p><div><p>I’m exploring stories you can influence. Continuity Engine is an open-source prototype that remembers choices, tracks character state, and proposes what could happen next.</p><p>The long-term idea: a TV-style experience where your decisions shape how a series unfolds. This engine is an early step toward that.</p><div class="technical-links"><a class="text-link" href="https://mahd-qureshi.github.io/continuity-engine/">Try the demo <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/mahd-qureshi/continuity-engine">Read the source <span aria-hidden="true">↗</span></a></div>
+<details class="engine-details"><summary>Under the hood <span aria-hidden="true">+</span></summary><p>Choices become immutable events; character state is rebuilt by replaying them. A constrained beam search proposes a three-beat narrative path, with an inspectable decision trace.</p><p class="technical-meta">JavaScript · v0.2 · Zero dependencies · Zero API calls</p></details></div></div></div>
+</article>
+<article class="project-row" aria-labelledby="compound-title"><div class="project-index"><span>02</span><p class="eyebrow">Aramco / Personal exploration</p></div><div class="project-content"><div class="project-heading"><h3 id="compound-title">Mapping the place<br> I called home<span>.</span></h3></div><div class="project-body"><p class="project-lede">Curiosity about the whole.<br> Attention to the details.</p><div><p>I grew up in Aramco compounds. I remapped the entire compound I called home to understand how its layout, energy systems, and place in the surrounding ecosystem fit together.</p><p>I’ve always been curious about the places and people around me. That same curiosity led me to build Moji: a companion I could turn to whenever a question came up.</p></div></div><figure class="compound-figure"><a href="assets/ras-tanura-najmah.webp" aria-label="Open the full Ras Tanura and Najmah reconstruction"><img src="assets/ras-tanura-najmah.webp" width="1672" height="941" alt="Approximate reconstruction of Ras Tanura and Najmah showing the residential community, beach, golf course, Rahima, and refinery in their surrounding context" loading="lazy" decoding="async"></a><figcaption><span>Ras Tanura / Najmah <span aria-hidden="true">↗</span></span><span>Approximate reconstruction from public references.</span></figcaption></figure></div></article>
+<article class="project-row interests-row" aria-labelledby="interests-title"><div class="project-index"><span>03</span><p class="eyebrow">Off the clock / Interests</p></div><div class="project-content"><h3 id="interests-title">Chess. Skateboarding.<br> <span>Audio engineering.</span></h3><p class="interests-copy">Three things I’m deeply interested in. Different ways to think, move, and listen.</p></div></article>
+</div>
+<div class="creative-section"><div class="section-label"><span><b>03</b> / The creative work</span><span>Another way to tell a story</span></div><div class="creative-grid">
+<article class="film-card"><div class="film-perfs" aria-hidden="true"></div><div class="film-inner"><p class="film-slug"><span>Selected performance</span><span>2026</span></p><h3><span>[</span>hope.exe<span>]</span></h3><p class="film-role">Mahd Qureshi as Mohan</p><p>I played the lead in Chichi Sharma’s university short film about a computer science student trying to find his way.</p><p>Acting and directing are serious ambitions for me, alongside the products I build.</p><a class="text-link" href="https://filmfreeway.com/hopedotexe">Explore the film &amp; credits <span aria-hidden="true">↗</span></a></div><div class="film-perfs" aria-hidden="true"></div></article>
+<div class="creative-note"><span class="taste-symbol" aria-hidden="true">↗</span><h3>Make it<br> <span>feel right.</span></h3><p>My instinct for LifeHub was to keep the experience centered on one screen and one character. I want it to feel like a muse you can turn to. That’s where I put my taste to work: in the decisions that shape the experience.</p><div class="hand-drawn" aria-hidden="true">always asking why <svg viewBox="0 0 200 25"><path d="M4 14Q86 1 191 11M29 23Q94 9 166 19"/></svg></div></div>
+</div></div>
+</section>
+<section class="horizon-section" aria-labelledby="horizon-title"><div class="wrap"><div class="section-label"><span><b>04</b> / The long view</span><span>Ambition, over time</span></div><div class="horizon-grid"><h2 id="horizon-title">Empowering<br> <span>Gen Z.</span></h2><div><p class="horizon-lede">I want to help as many people in my generation as possible create a positive impact. My ambition is to build at the scale of civilization.</p><p>Over time, I want to explore communication across species, robotics, new kinds of sport, and better ways to travel. These are long-term ambitions. LifeHub is my focus today.</p><p class="horizon-signoff">Start with one person.<br> Build something that matters to them.</p></div></div></div></section>
+<section class="contact-section wrap" id="contact" aria-labelledby="contact-title"><div class="section-label"><span><b>05</b> / Make contact</span><span>Good work starts here</span></div><p class="contact-prelude">A product. A film. An idea you can’t leave alone.</p><h2 id="contact-title"><a href="mailto:qureshi.mahd@gmail.com">LET’S CHAT<span aria-hidden="true">↗</span></a></h2><div class="contact-bottom"><p>Let’s make something worth caring about.</p><a class="email" href="mailto:qureshi.mahd@gmail.com">qureshi.mahd@gmail.com</a></div></section>
+</main>
+<footer class="site-footer wrap"><a class="brand" href="#top" aria-label="Back to top"><img src="favicon.svg" width="32" height="32" alt=""><span>MAHD QURESHI</span></a><p>Founder & creator · Toronto</p><a href="https://github.com/mahd-qureshi">GitHub <span aria-hidden="true">↗</span></a></footer>
+</body></html>
