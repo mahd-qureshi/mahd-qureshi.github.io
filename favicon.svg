@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="13" fill="#16150f"/>
-  <path d="M16 45V19h6.4l9.6 15.4L41.6 19H48v26h-6.2V30.2l-7.6 12h-4.4l-7.6-12V45z" fill="#f0904f"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title>MQ</title><rect width="64" height="64" rx="14" fill="#121217"/><path d="M7 46V18h6l6 11 6-11h6v28h-6V31l-6 10-6-10v15Z" fill="#a58aff"/><path fill-rule="evenodd" d="M46 17c8 0 12 6 12 15s-4 15-12 15-12-6-12-15 4-15 12-15Zm0 7c-4 0-5 3-5 8s1 8 5 8 5-3 5-8-1-8-5-8Z" fill="#f6f5fa"/><path d="m46 37 9 11" fill="none" stroke="#576cff" stroke-width="7"/></svg>

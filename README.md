@@ -20,7 +20,7 @@ Open http://127.0.0.1:4173/.
 - `site.js`: accessible two-view LifeHub screenshot switcher; the first view
   remains usable without JavaScript.
 - `404.html`: custom not-found page.
-- `assets/`: authentic LifeHub screenshots and the social preview card.
+- `assets/`: LifeHub screenshots, the supplied portrait and community reconstruction, the MQ touch icon, and social preview card.
 
 ## Content provenance
 
@@ -35,3 +35,7 @@ come from the founder's public product site at https://thelifehub.site/.
 Continuity Engine descriptions and links are retained from the previous site.
 
 `CNAME` retains the existing custom domain. GitHub Pages deploys from `main`.
+
+## Visual identity and supplied images
+
+The Violet Edition uses black, near-white, violet, and electric blue, with an MQ monogram and uppercase navigation. The founder supplied the portrait and Ras Tanura/Najmah reconstruction. The reconstruction is explicitly approximate and based on public references; it is not presented as a verified survey. Original supplied image files remain unchanged; the website serves optimized WebP copies.
