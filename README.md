@@ -10,7 +10,7 @@ Run `python3 -m http.server 4183 --bind 127.0.0.1` from this directory.
 
 ## Structure
 
-- `index.html`, `styles.css`: minimal homepage, native map disclosure, and appearance links.
+- `index.html`, `minimal.css`: minimal homepage, native map disclosure, and appearance links.
 - `violet/index.html`, `violet/styles.css`, `violet/site.js`: retained original Violet Edition and its two-view product gallery.
 - `assets/`: shared images; `social-minimal.png` is the minimal homepage sharing card.
 - `404.html`: minimal not-found page.
@@ -31,3 +31,5 @@ Film credit: https://filmfreeway.com/hopedotexe. Product imagery: https://thelif
 The information hierarchy draws on Skyler Chan (https://www.skylerchan.ca/) and Levent Alpöge (https://alpo.ge/): direct introductions, clear current work, and links to actual artifacts. Page content and implementation are original to Mahd.
 
 `CNAME` retains the existing custom domain. GitHub Pages deploys from `main` at the repository root.
+
+`styles.css` is retained for compatibility with cached copies of the previous homepage. The minimal edition uses its own stylesheet URL.
