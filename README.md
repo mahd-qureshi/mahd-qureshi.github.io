@@ -1,41 +1,33 @@
-# Mahd Qureshi — founder & creator
+# Mahd Qureshi — founder & builder
 
-Personal site at https://www.mahdqureshi.com/.
-Static HTML, CSS, and a small progressive-enhancement script. No framework,
-external fonts, trackers, dependencies, or build step.
+Personal website at https://www.mahdqureshi.com/.
 
-## Local preview
+A minimal homepage with an optional Violet Edition at `/violet/`. Both editions are static HTML/CSS; the minimal page works without JavaScript. No frameworks, external fonts, trackers, dependencies, or build step.
 
-```sh
-python3 -m http.server 4173 --bind 127.0.0.1
-```
+## Preview
 
-Open http://127.0.0.1:4173/.
+Run `python3 -m http.server 4183 --bind 127.0.0.1` from this directory.
 
-## Main files
+## Structure
 
-- `index.html`: founder positioning, LifeHub, personal background, film credit,
-  Continuity Engine, long-term ambition, and contact.
-- `styles.css`: responsive editorial layout and reduced-motion support.
-- `site.js`: accessible two-view LifeHub screenshot switcher; the first view
-  remains usable without JavaScript.
-- `404.html`: custom not-found page.
-- `assets/`: LifeHub screenshots, the supplied portrait and community reconstruction, the MQ touch icon, and social preview card.
+- `index.html`, `styles.css`: minimal homepage, native map disclosure, and appearance links.
+- `violet/index.html`, `violet/styles.css`, `violet/site.js`: retained original Violet Edition and its two-view product gallery.
+- `assets/`: shared images; `social-minimal.png` is the minimal homepage sharing card.
+- `404.html`: minimal not-found page.
+- `favicon.svg`: shared MQ monogram.
+
+Both editions have ordinary links to one another; no storage or JavaScript is needed to change the view. Assets stay shared so links work under `/violet/`.
 
 ## Content provenance
 
-The founder supplied the LifeHub status, 20 TestFlight users, 300+ people
-approached in person, end-to-end ownership, personal background, and ambitions
-on October 10, 2026. Outreach is not presented as retention or waitlist signups.
-App Store submission is in progress; the future semester recap is not advertised
-as a released feature. Private model/infrastructure information is omitted.
+The founder confirmed on October 13, 2026 that LifeHub was submitted to the App Store and awaiting review. The last confirmed TestFlight count is 20. Outreach is not presented as retention, customers, or waitlist signups. Future product ambitions are explicitly distinguished from current work. Model/infrastructure details remain private.
 
-The film credit is linked to https://filmfreeway.com/hopedotexe. LifeHub images
-come from the founder's public product site at https://thelifehub.site/.
-Continuity Engine descriptions and links are retained from the previous site.
+The portrait and Ras Tanura/Najmah image were supplied by the founder. The latter is labeled as an approximate reconstruction from public references, not a verified survey. WebP copies are optimized for the web.
 
-`CNAME` retains the existing custom domain. GitHub Pages deploys from `main`.
+Film credit: https://filmfreeway.com/hopedotexe. Product imagery: https://thelifehub.site/. Continuity Engine demo/source links remain directly accessible.
 
-## Visual identity and supplied images
+## Design references
 
-The Violet Edition uses black, near-white, violet, and electric blue, with an MQ monogram and uppercase navigation. The founder supplied the portrait and Ras Tanura/Najmah reconstruction. The reconstruction is explicitly approximate and based on public references; it is not presented as a verified survey. Original supplied image files remain unchanged; the website serves optimized WebP copies.
+The information hierarchy draws on Skyler Chan (https://www.skylerchan.ca/) and Levent Alpöge (https://alpo.ge/): direct introductions, clear current work, and links to actual artifacts. Page content and implementation are original to Mahd.
+
+`CNAME` retains the existing custom domain. GitHub Pages deploys from `main` at the repository root.
